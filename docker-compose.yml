@@ -4,6 +4,9 @@ services:
     image: nginx
     ports:
       - "80:80"
+      - "8086:8086"
+    depends_on:
+      - php
     volumes:
       - ./project:/var/www/html/project
       - ./default.conf:/etc/nginx/conf.d/default.conf
@@ -15,6 +18,8 @@ services:
       context: ./php_pdo
     volumes:
       - ./project:/var/www/html/project
+    ports:
+      - "9000:9000"   
     networks:
       - webnet
 networks:
