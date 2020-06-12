@@ -6,7 +6,7 @@
 ```
 dokcer-compose up -d
 ```
-2、stop image：
+2、down image：
 ```
 dokcer-compose down
 ```
@@ -17,4 +17,8 @@ dokcer-compose restart
 4、build：
 ```
 dokcer-compose build
+```
+4、update Dockerfile after build：
+```
+docker-compose up -d --build
 ```
