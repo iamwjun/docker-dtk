@@ -15,5 +15,6 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install mysqli \
     && docker-php-ext-install bcmath
 
-RUN apt-get install -y zip unzip zlib1g-dev libpng-dev
+RUN apt-get install -y unzip zlib1g-dev libpng-dev
+RUN docker-php-ext-install zip
 RUN docker-php-ext-install gd
